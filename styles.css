@@ -321,6 +321,31 @@ img { max-width: 100%; }
 /* About */
 .about-grid h2 { max-width: 640px; }
 
+.tools-list {
+  margin: 40px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tools-list li {
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  border-radius: 980px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--fg-dim);
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.tools-list li:hover {
+  color: var(--fg);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
 /* Contact */
 .contact-inner { text-align: center; }
 .contact-inner .section-sub { margin: 18px auto 0; }
