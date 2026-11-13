@@ -321,8 +321,17 @@ img { max-width: 100%; }
 /* About */
 .about-grid h2 { max-width: 640px; }
 
+.tools-title {
+  margin: 40px 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-faint);
+}
+
 .tools-grid {
-  margin: 40px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   display: grid;
