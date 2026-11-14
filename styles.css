@@ -396,10 +396,6 @@ img { max-width: 100%; }
   object-fit: contain;
 }
 
-.tool-icon-invert {
-  filter: invert(1);
-}
-
 .tool-text {
   display: flex;
   flex-direction: column;
