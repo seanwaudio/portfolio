@@ -401,44 +401,6 @@ img { max-width: 100%; }
   background: rgba(0, 0, 0, 0.1);
 }
 
-.yt-play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  transform: translate(-50%, -50%);
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.92);
-  color: #0a0a0c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
-  pointer-events: none;
-}
-
-.yt-play-btn svg {
-  width: 26px;
-  height: 26px;
-  margin-left: 3px;
-  fill: currentColor;
-}
-
-.yt-facade:hover .yt-play-btn,
-.yt-facade:focus-visible .yt-play-btn {
-  transform: translate(-50%, -50%) scale(1.08);
-  background: #fff;
-}
-
-@media (max-width: 480px) {
-  .yt-play-btn { width: 56px; height: 56px; }
-  .yt-play-btn svg { width: 20px; height: 20px; }
-}
-
 .video-placeholder {
   position: absolute;
   inset: 0;
