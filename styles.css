@@ -147,6 +147,94 @@ img { max-width: 100%; }
 
 .btn-primary:hover { opacity: 0.85; }
 
+.hero-meta {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--fg-faint);
+}
+
+.hero-location {
+  letter-spacing: 0.02em;
+}
+
+.hero-meta-dot {
+  opacity: 0.6;
+}
+
+.flip-clock {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.flip-colon {
+  color: var(--fg-faint);
+  font-weight: 600;
+  padding: 0 1px;
+}
+
+.flip-digit {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 22px;
+  perspective: 120px;
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--fg-dim);
+  backface-visibility: hidden;
+}
+
+.flip-digit::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  top: 50%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.35);
+  transform: translateY(-0.5px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.flip-back {
+  transform: rotateX(180deg);
+}
+
+.flip-digit.flipping .flip-front {
+  animation: flipFront 0.5s ease-in forwards;
+}
+
+.flip-digit.flipping .flip-back {
+  animation: flipBack 0.5s ease-out forwards;
+}
+
+@keyframes flipFront {
+  from { transform: rotateX(0deg); }
+  to { transform: rotateX(-180deg); }
+}
+
+@keyframes flipBack {
+  from { transform: rotateX(180deg); }
+  to { transform: rotateX(0deg); }
+}
+
 .btn-secondary {
   background: rgba(255, 255, 255, 0.08);
   color: var(--fg);
