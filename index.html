@@ -32,7 +32,7 @@
 <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
 <meta name="theme-color" content="#0a0a0c">
 
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -107,14 +107,11 @@
     <h2>My Sound.</h2>
     <p class="section-sub">Full of sound design, mixing, and original score.</p>
     <div class="video-frame">
-      <iframe
-        src="https://www.youtube.com/embed/rxeGPFeHU_E"
-        title="Sean W Audio Demo Reel"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
+      <div class="yt-facade" data-yt-id="rxeGPFeHU_E" role="button" tabindex="0" aria-label="Play: Sean W Audio Demo Reel">
+        <button class="yt-play-btn" aria-hidden="true" tabindex="-1">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7-11-7z"/></svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>
@@ -127,14 +124,11 @@
 
     <div class="jam-grid">
       <div class="jam-video video-frame">
-        <iframe
-          src="https://www.youtube.com/embed/nb0Efyc61sU"
-          title="User Interface Gameplay"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
+        <div class="yt-facade" data-yt-id="nb0Efyc61sU" role="button" tabindex="0" aria-label="Play: User Interface Gameplay">
+          <button class="yt-play-btn" aria-hidden="true" tabindex="-1">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7-11-7z"/></svg>
+          </button>
+        </div>
       </div>
       <div class="jam-info">
         <p>This one was a chill weekend project with a small team — the best part was just being in it with other devs, bouncing ideas back and forth as things came together. The only real challenge was landing the vibe for the music, which took a couple of goes to get right.</p>
@@ -231,6 +225,6 @@
   <p>&copy; <span id="year"></span> Sean Waldron. All rights reserved.</p>
 </footer>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>

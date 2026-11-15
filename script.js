@@ -80,3 +80,36 @@ function updateClock() {
 
 updateClock();
 setInterval(updateClock, 1000);
+
+// YouTube facade — custom thumbnail + play button, real player loads only on click
+document.querySelectorAll('.yt-facade').forEach((facade) => {
+  const id = facade.dataset.ytId;
+  const hqUrl = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+  const maxresUrl = `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`;
+
+  facade.style.backgroundImage = `url('${hqUrl}')`;
+  const probe = new Image();
+  probe.onload = () => {
+    if (probe.naturalWidth > 480) facade.style.backgroundImage = `url('${maxresUrl}')`;
+  };
+  probe.src = maxresUrl;
+
+  const loadVideo = () => {
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+    iframe.title = facade.getAttribute('aria-label') || 'YouTube video';
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+    iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+    iframe.allowFullscreen = true;
+    facade.replaceWith(iframe);
+  };
+
+  facade.addEventListener('click', loadVideo);
+  facade.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      loadVideo();
+    }
+  });
+});
