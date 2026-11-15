@@ -76,6 +76,8 @@ img { max-width: 100%; }
 
 .nav-links a:hover { color: var(--fg); }
 
+.label-short { display: none; }
+
 /* Hero */
 .hero {
   min-height: 100vh;
@@ -580,6 +582,10 @@ footer p {
 }
 
 @media (max-width: 480px) {
+  .nav-inner { padding: 0 16px; }
   .nav-logo { font-size: 14px; }
   .nav-links { gap: 14px; }
+  .nav-links a { font-size: 12px; }
+  .label-full { display: none; }
+  .label-short { display: inline; }
 }
