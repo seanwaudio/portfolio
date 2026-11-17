@@ -543,8 +543,13 @@ img { max-width: 100%; }
   border-color: var(--fg);
 }
 
-.socials {
+.cv-download {
+  display: inline-block;
   margin-top: 28px;
+}
+
+.socials {
+  margin-top: 36px;
   display: flex;
   gap: 28px;
   justify-content: center;
