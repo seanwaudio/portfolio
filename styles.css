@@ -561,8 +561,8 @@ img { max-width: 100%; }
 }
 
 .cv-download {
-  display: inline-block;
-  margin-top: 28px;
+  display: table;
+  margin: 28px auto 0;
 }
 
 .socials {
