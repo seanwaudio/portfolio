@@ -426,6 +426,14 @@ img { max-width: 100%; }
   box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6);
 }
 
+.about-photo .cv-download {
+  display: block;
+  width: 100%;
+  margin: 18px 0 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
 .about-grid h2 { max-width: 640px; }
 
 .moves-word {
@@ -558,11 +566,6 @@ img { max-width: 100%; }
 
 .email-link:hover {
   border-color: var(--fg);
-}
-
-.cv-download {
-  display: table;
-  margin: 28px auto 0;
 }
 
 .socials {
